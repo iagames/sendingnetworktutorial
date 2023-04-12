@@ -2,17 +2,18 @@
 <html>
   <head>
     <title>My Projects Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="./sdnChatWidget.js"></script>
-    <script src="./chatapp.js"></script>
+    <link rel="stylesheet" type="text/css" href="./src/css/style.css">
+    <script src="./src/js/sdnChatWidget.js"></script>
+    <script src="./src/js/chatapp.js"></script>
    </script>
+   
   </head>
   <body>
     <div>
       <div><button class="loginbutton" type="button" onclick="login()">Log In</button></div> 
       
       <div class="row">
-        <div class="column">
+        <div class="leftcolumn">
           <h1>Web3 Consulting Pros Products</h1>
           <div>
             <img src="./img/engineer.png">
@@ -35,8 +36,21 @@
             <p>We offer tokenomics and web3 game stacks expertise</p>
           </div>
         </div>
-        <div class="column">
+        <div class="midcolumn">
           <h1>Let's talk!</h1>
+          <div class="buttongroup">
+            <button type="button" onclick="createPublicRoom()">Create Public Room</button> 
+              <input type="text" id="pubroom" name="Name" placeholder="Public Room Name">
+              <br><br>
+            <button type="button" onclick="createPrivateRoom()">Create Private Room</button>
+            <input type="text" id="privroom" name="Name" placeholder="Private Room Name">
+              <br><br>
+            <button type="button" onclick="inviteUser()">Invite to Private Chat</button>
+            <input type="text" id="invitee" name="Name" placeholder="User ID">
+          </div>
+          
+        </div>
+        <div class="rightcolumn">
           <chat-component baseUrl="https://sdktest.sending.me"/>
         </div>
       </div>
